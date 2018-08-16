@@ -9,6 +9,9 @@ import { AboutComponent } from './components/about/about.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { RuleComponent } from './components/rule/rule.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { BookingComponent } from './components/booking/booking.component';
+import { BookingAdminComponent } from './components/booking-admin/booking-admin.component';
+import { BookingWrapperComponent } from './components/booking-wrapper/booking-wrapper.component';
 // import localeGr from '@angular/common/locales/gr';
 
 // registerLocaleData(localeGr);
@@ -25,7 +28,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 	AboutComponent,
 	RulesComponent,
 	RuleComponent,
-	ContactComponent
+	ContactComponent,
+	BookingComponent,
+	BookingAdminComponent,
+	BookingWrapperComponent
 	],
 	imports: [
 	BrowserModule,

@@ -1,8 +1,7 @@
 .wrapper{
-	/*margin-top: 70vh;*/
 	padding-top: 10vh;
-	/*background-color: rgba(122,  192, 197, 0.7);*/
 	padding-bottom: 10vh;
+	background-color: rgba(122,  192, 197, 0.7);
 }
 
 .container-fluid {
@@ -13,7 +12,7 @@
 }
 
 .bodyWrapper {
-		padding-top: 5vh;
+	padding-top: 5vh;
 
 }
 

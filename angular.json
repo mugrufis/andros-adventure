@@ -23,9 +23,14 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/fullcalendar/dist/fullcalendar.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/moment/min/moment.min.js",
+              "./node_modules/fullcalendar/dist/fullcalendar.min.js",
+              "./node_modules/fullcalendar/dist/locale/el.js"
+            ]
           },
           "configurations": {
             "production": {

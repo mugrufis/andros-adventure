@@ -18,3 +18,12 @@ p, a {
 	font-size: 18px;
 	letter-spacing: 1px;
 }
+
+/*Full calendar styles not working in the component*/
+.fc-scroller {
+	height: auto !important;
+}
+
+.fc-divider {
+	display: none !important;
+}

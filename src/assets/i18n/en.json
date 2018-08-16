@@ -6,5 +6,6 @@
 		"BOOKING":"Booking",
 		"CONTACT":"Contact",
 		"LANGUAGE": "Ελληνικά"
-	}
+	},
+	"LOCALE": "en"
 }

@@ -25,7 +25,7 @@
           <li *ngIf="!navItem.subItems" class="nav-item ">
             <!-- to add as class active dynamically -->
             <a [ngClass]="{'active': getCurrentUrl() === navItem.link, 'nav-link': true}" 
-                href="{{navItem.link}}" 
+                (click)="onNavbarClick(navItem.link)" 
                  > 
 
                 {{navItem.title | translate}} 

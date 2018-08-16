@@ -1,0 +1,92 @@
+/*.navbarWrapper {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 10vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.navbarLink {
+	padding-right: 10px;
+	font-size: 20px;
+}
+
+.navbarLink a, .navbarLink button {
+	color: white;
+	text-decoration: none;
+}
+
+.navbarLink a, .navbarLink button:hover {
+	cursor: pointer;
+}
+
+.navbarLink button {
+	border: none;
+	background: transparent;
+	font-size: 19px;
+	outline: none;
+}
+
+.linksWrapper {
+	padding-top: 3vh;
+	padding-left: 10px;
+}
+.naguageLink{
+	float: right;
+}*/
+
+.langDropdown{
+	position: absolute;
+    right: 10px;
+    cursor: pointer;
+    top: 15px;
+    color: rgba(0,0,0,.5);
+}
+
+.allLanguages{
+	    left: -80px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    color: rgba(0,0,0,.5);
+}
+
+.languageName:hover{
+	color: steelblue;
+}
+
+li a {
+	/*font-size: 1.2em;*/
+}
+
+.expandedContentWrapper{
+	background-color: white;
+	/*box-shadow: 0 5px 5px -3px rgba(0,0,0,.2);*/
+}
+
+#navbarWrapper{
+	/*height: 60px;*/
+	/*position: fixed;*/
+	/*box-shadow: 0 5px 5px -3px rgba(0,0,0,.2);*/
+	background-color: white;
+    width: 100vw;
+    z-index: 2;
+}
+
+.navbar-toggler{
+	outline: none;
+}
+
+
+a:hover{
+	background-color: white;
+}
+
+.dropdown-item, .goToHome{
+	color: rgba(0,0,0,.5);
+}
+
+.dropdown-item:hover, .goToHome:hover, .active, a:hover{
+
+}

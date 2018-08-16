@@ -1,0 +1,16 @@
+.wrapper {
+	background-color: rgba(122,  192, 197, 0.7);
+	padding-top: 5vh;
+	padding-bottom: 8vh;
+}
+
+.ruleWrapper {
+	padding-top: 20px;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}

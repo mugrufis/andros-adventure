@@ -1,0 +1,20 @@
+<div class="container-fluid wrapper">
+	<div class="row">
+		<div class="col-sm-12">
+			<h2 class="text-center" >{{'NAVBAR.RULES' | translate}}</h2>
+		</div>
+		<div class="col-sm-1 col-0"></div>
+		<div class="col-sm-10 col-12">
+		<div class="row">
+			<div *ngFor="let rule of rules" class="col-sm-6 col-12 ruleWrapper">
+				<app-rule
+				[iconUrl]="rule.iconUrl"
+				[title]="rule.title"
+				[body]="rule.body"
+				></app-rule>
+			</div>
+		</div>
+		</div>
+		<div class="col-sm-1 col-0"></div>
+	</div>
+</div>

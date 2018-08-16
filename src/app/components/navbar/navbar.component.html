@@ -1,0 +1,88 @@
+<!-- <div class="navbarWrapper">
+	<div class="linksWrapper">
+	<span class="navbarLink" *ngFor="let link of navbarLinks">
+		<a href="link.href">{{link.title | translate}}</a>
+	</span>
+	<span class="navbarLink naguageLink"><button (click)="changeLanguage()" href="link.href">{{'NAVBAR.LANGUAGE' | translate}}</button></span>
+	</div>
+</div> -->
+
+
+<div id="navbarWrapper">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top expandedContentWrapper">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+        <ng-container *ngFor="let navItem of navbarLinks">
+
+          <!-- normal button -->
+          <li *ngIf="!navItem.subItems" class="nav-item ">
+            <!-- to add as class active dynamically -->
+            <a [ngClass]="{'active': getCurrentUrl() === navItem.link, 'nav-link': true}" 
+                href="{{navItem.link}}" 
+                 > 
+
+                {{navItem.title | translate}} 
+                <span class="sr-only">(current)</span>
+              </a>
+          </li>
+
+          <!-- dropdown button -->
+          <li *ngIf="navItem.subItems" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+            href="#" 
+            id="navbarDropdown" 
+            role="button" 
+            data-toggle="dropdown" 
+            aria-haspopup="true" 
+            aria-expanded="false">
+
+            {{navItem.title | translate}}
+            
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ng-container  *ngFor="let dropdownItem of navItem.subItems">
+              <a [ngClass]="{'active': getCurrentUrl() === navItem.link, 'dropdown-item': true}" 
+              href="{{dropdownItem.link}}" href="#" (click)="onMenuClick()">
+              {{dropdownItem.title | translate}}</a>
+              <div *ngIf="dropdownItem.divider" class="dropdown-divider"></div>
+            </ng-container>
+          </div>
+        </li>
+
+      </ng-container>
+    </ul>
+  </div>
+
+  <div class="navbar-right">
+            <ul class="nav navbar-nav langDropdown">
+                <li class="dropdown">
+
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      <span id="lanNavSel">{{chosenLanguage}}</span> 
+                      <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu allLanguages" role="menu">
+                        <li *ngFor="let lang of languages; let i = index">
+                          <a class="language" (click)="changeLanguage(lang)"> 
+                            <span class="languageName">{{lang.language}}</span>
+                          </a>
+                            <div *ngIf="i !== languages.length - 1" class="dropdown-divider"></div>
+                        </li>
+                   
+                  </ul>
+                </li>
+            </ul> 
+        </div> 
+        <!--/.navbar-collapse -->
+</nav>
+</div>
+
+<div class="bottomMargin"></div>

@@ -7,5 +7,8 @@
 		"CONTACT":"Contact",
 		"LANGUAGE": "Ελληνικά"
 	},
+	"ABOUT": {
+		"BODY": "A mystery room is a place full of riddles, hidden objects etc similar to an escape room. The difference is that a party is not looking for a way to escape the room. They will try to reveal the story that is hidden inside it."
+	},
 	"LOCALE": "en"
 }

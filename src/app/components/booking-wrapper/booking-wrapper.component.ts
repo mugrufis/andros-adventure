@@ -37,4 +37,18 @@ export class BookingWrapperComponent implements OnInit {
 
 	}
 
+	onNewClick () {
+		// select with price
+		// 1- 30
+		// 2 - 40
+		// 3 - 45
+		// 4 - 48
+		// 5 - 50
+		// 6 - 60
+		// 7 - 70
+		// 8 - 80
+		
+
+	}
+
 }

@@ -1,7 +1,7 @@
 .mainImage {
 	width: 100vw;
-	height: 70vh;
-	/*position: fixed;*/
+	height: 100vh;
+	position: fixed;
 	z-index: -1;
 	top: 0;
 	left: 0;

@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { BookingAdminComponent } from './components/booking-admin/booking-admin.component';
 import { BookingWrapperComponent } from './components/booking-wrapper/booking-wrapper.component';
+import { ScrollLogoComponent } from './components/scroll-logo/scroll-logo.component';
 // import localeGr from '@angular/common/locales/gr';
 
 // registerLocaleData(localeGr);
@@ -31,7 +32,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 	ContactComponent,
 	BookingComponent,
 	BookingAdminComponent,
-	BookingWrapperComponent
+	BookingWrapperComponent,
+	ScrollLogoComponent
 	],
 	imports: [
 	BrowserModule,

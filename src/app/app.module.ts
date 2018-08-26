@@ -13,6 +13,10 @@ import { BookingComponent } from './components/booking/booking.component';
 import { BookingAdminComponent } from './components/booking-admin/booking-admin.component';
 import { BookingWrapperComponent } from './components/booking-wrapper/booking-wrapper.component';
 import { ScrollLogoComponent } from './components/scroll-logo/scroll-logo.component';
+import { DarkOfficeComponent } from './components/dark-office/dark-office.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BootstrapInputComponent } from './components/bootstrap-input/bootstrap-input.component';
 // import localeGr from '@angular/common/locales/gr';
 
 // registerLocaleData(localeGr);
@@ -33,11 +37,16 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 	BookingComponent,
 	BookingAdminComponent,
 	BookingWrapperComponent,
-	ScrollLogoComponent
+	ScrollLogoComponent,
+	DarkOfficeComponent,
+	ModalComponent,
+	BootstrapInputComponent
 	],
 	imports: [
 	BrowserModule,
 	HttpClientModule,
+	FormsModule,
+	ReactiveFormsModule,
 	TranslateModule.forRoot({
 		loader: {
 			provide: TranslateLoader,

@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+<div class="form-group">
+	<label for="{{field}}">{{label | translate}}</label>
+	<input 
+	type="text" 
+	class="form-control" 
+	id="{{field}}" 
+	placeholder="" 
+	formControlName="{{field}}" 
+	>
+</div>
+</form>

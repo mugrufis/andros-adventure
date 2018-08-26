@@ -214,7 +214,7 @@ export class BookingComponent implements OnInit {
 			firstDay: this.firstDay,
 			views: this.views,
 			dayClick: (date, jsEvent, view) => {
-				console.log('dayClick', date);
+				// console.log('dayClick', date);
 				this.onDayClick.emit({
 					'date': date,
 					'jsEvent': jsEvent,

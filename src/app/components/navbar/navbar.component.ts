@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit {
 	public navbarLinks: ILink[] = [
 	{title: 'NAVBAR.HOME', link: 'home'},
 	{title: 'NAVBAR.ABOUT', link: 'about'},
+	{title: 'NAVBAR.DARK_OFFICE', link: 'darkOffice'},
 	{title: 'NAVBAR.RULES', link: 'rules'},
 	{title: 'NAVBAR.BOOKING', link: 'booking'},
 	{title: 'NAVBAR.CONTACT', link: 'contact'},

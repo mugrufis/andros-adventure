@@ -19,3 +19,17 @@
 a {
 	color: black;
 }
+
+button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.iconWrapper {
+	padding-top: 20px;
+}

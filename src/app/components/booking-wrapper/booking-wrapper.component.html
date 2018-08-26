@@ -18,5 +18,58 @@
 	[slotDuration]="'02:00:00'"
 	[firstDay]="'today'"
 	(onViewRender)="onViewRender($event)"
+	(onDayClick)="onDayClick($event)"
 	></app-booking>
 </div>
+
+<app-modal #modal
+[title]="'BOOKING.NEW'"
+[modalBodyTemplate]="modalBodyTemplate"
+></app-modal>
+
+<ng-template #modalBodyTemplate>
+	<app-bootstrap-input 
+	[form]="newReservationFg"
+	[field]="'name'"
+	[label]="'BOOKING.NAME'"
+	></app-bootstrap-input>
+
+	<app-bootstrap-input 
+	[form]="newReservationFg"
+	[field]="'phone'"
+	[label]="'BOOKING.PHONE'"
+	></app-bootstrap-input>
+
+	<app-bootstrap-input 
+	[form]="newReservationFg"
+	[field]="'email'"
+	[label]="'BOOKING.EMAIL'"
+	></app-bootstrap-input>
+
+	<div class="form-group">
+		<label for="start">{{'BOOKING.START' | translate}}</label>
+		<input 
+		type="text" 
+		class="form-control" 
+		id="start" 
+		placeholder="" 
+		disabled 
+		[value]="startDisplayValue" 
+		>
+	</div>
+
+	<div class="form-group">
+		<label for="end">{{'BOOKING.END' | translate}}</label>
+		<input 
+		type="text" 
+		class="form-control" 
+		id="end" 
+		placeholder="" 
+		disabled 
+		[value]="endDisplayValue"
+		>
+	</div>
+
+	{{newReservationFg?.getRawValue() | json}}
+
+</ng-template>

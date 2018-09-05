@@ -33,3 +33,16 @@ button:hover {
 .iconWrapper {
 	padding-top: 20px;
 }
+
+.attribution {
+	text-align: center;
+	font-size: 8px;
+}
+
+.attribution a {
+	font-size: 8px;
+}
+
+.attributionWrapper {
+	padding-top: 20px;
+}

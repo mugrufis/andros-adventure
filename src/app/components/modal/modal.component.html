@@ -1,3 +1,4 @@
+<ng-container *ngIf="modalExists">
 <!-- Button HTML (to Trigger Modal) -->
 <button #modalActivator style="display: none;" role="button" class="btn btn-large btn-primary" data-toggle="modal" data-target="#myModal" >Launch Modal</button>
 
@@ -8,27 +9,28 @@
       <div class="modal-header">
 
         <h4 class="modal-title">{{title | translate}}</h4>
-   
+
 
         <button #modalCloseButton type="button" class="close" data-dismiss="modal" (click)="onStateChange(true)" aria-hidden="true">&times;</button>
 
- 
-    </div>
-    <div class="modal-body">
-               <ng-container *ngIf="modalBodyTemplate">
-
-                <ng-container *ngTemplateOutlet="modalBodyTemplate; context: { bidForm: bidForm }">
-                    
-                </ng-container> 
-
-          </ng-container>
 
       </div>
+      <div class="modal-body">
+       <ng-container *ngIf="modalBodyTemplate">
+
+        <ng-container *ngTemplateOutlet="modalBodyTemplate; context: { bidForm: bidForm }">
+
+        </ng-container> 
+
+      </ng-container>
+
+    </div>
    <!--    <div class="modal-footer container-fluid">
           <div *ngIf="(buttons | json) !=='{}'" style="width: 100%">
            
         </div>
-    </div> -->
+      </div> -->
+    </div>
+  </div>
 </div>
-</div>
-</div>
+</ng-container>

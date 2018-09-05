@@ -1,0 +1,10 @@
+.connectBtn {
+	background: transparent;
+	outline: none;
+	border: none;
+	font-size: 8px;
+}
+
+button:hover {
+	cursor: crosshair;
+}

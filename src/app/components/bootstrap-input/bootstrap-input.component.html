@@ -2,7 +2,7 @@
 <div class="form-group">
 	<label for="{{field}}">{{label | translate}}</label>
 	<input 
-	type="text" 
+	[attr.type]="(field === 'password') ? field :'text'" 
 	class="form-control" 
 	id="{{field}}" 
 	placeholder="" 

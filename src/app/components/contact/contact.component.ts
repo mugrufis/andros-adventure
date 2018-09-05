@@ -17,11 +17,11 @@ export class ContactComponent implements OnInit {
 	}
 
 	goToInstagram() {
-		window.open('https://support.wwf.org.uk', '_blank');
+		window.open('https://www.instagram.com/andros.adventures/', '_blank');
 	}
 
 	goToTripAdvisor() {
-		window.open('https://support.wwf.org.uk', '_blank');
+		window.open('https://www.tripadvisor.com/Attraction_Review-g2705941-d14967990-Reviews-Andros_Adventures-Ormos_Korthiou_Andros_Cyclades_South_Aegean.html', '_blank');
 	}
 
 }

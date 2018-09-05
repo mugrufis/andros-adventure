@@ -1,0 +1,26 @@
+<div style="text-align: center;">
+<button class="connectBtn" (click)="onConnect()">Σύνδεση</button>
+</div>
+
+<app-modal #modal
+[title]="'BOOKING.NEW'"
+[modalBodyTemplate]="modalBodyTemplate"
+></app-modal>
+
+<ng-template #modalBodyTemplate>
+	<app-bootstrap-input 
+	[form]="userFg"
+	[field]="'username'"
+	[label]="'Username:'"
+	></app-bootstrap-input>
+
+	<app-bootstrap-input 
+	[form]="userFg"
+	[field]="'password'"
+	[label]="'Password:'"
+	></app-bootstrap-input>
+
+	<button (click)="onModalCancel()" type="button" class="btn btn-outline-danger float-right cancelButton">{{ 'BOOKING.CANCEL' | translate}}</button>
+	<button [disabled]="!userFg.valid" (click)="onModalConnect()" type="button" class="btn btn-outline-primary float-right">Σύνδεση</button>
+
+</ng-template>

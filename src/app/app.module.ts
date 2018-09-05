@@ -17,6 +17,9 @@ import { DarkOfficeComponent } from './components/dark-office/dark-office.compon
 import { ModalComponent } from './components/modal/modal.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BootstrapInputComponent } from './components/bootstrap-input/bootstrap-input.component';
+import { LoginComponent } from './components/login/login.component';
+import { LoginService } from './services/login.service';
+
 // import localeGr from '@angular/common/locales/gr';
 
 // registerLocaleData(localeGr);
@@ -40,7 +43,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 	ScrollLogoComponent,
 	DarkOfficeComponent,
 	ModalComponent,
-	BootstrapInputComponent
+	BootstrapInputComponent,
+	LoginComponent
 	],
 	imports: [
 	BrowserModule,
@@ -55,7 +59,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 		}
 	})
 	],
-	providers: [],
+	providers: [
+	LoginService
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

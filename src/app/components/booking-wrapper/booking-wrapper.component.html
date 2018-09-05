@@ -19,6 +19,7 @@
 	[firstDay]="'today'"
 	(onViewRender)="onViewRender($event)"
 	(onDayClick)="onDayClick($event)"
+	(onEventClick)="onEventClick($event)"
 	></app-booking>
 </div>
 
@@ -47,6 +48,22 @@
 	></app-bootstrap-input>
 
 	<div class="form-group">
+		<label for="my-dropdown">{{'PERSONS_AND_PRICES.LABEL' | translate}}</label>
+		<div id="my-dropdown" class="dropdown">
+			<button style="text-align: left; border: 1px solid #ced4da;" class="btn dropdown-toggle form-control" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				{{ personsAndPricesTitle | translate}}
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+				<ng-container *ngFor="let item of personsAndPrices; let last = last">
+					<button (click)="onDropdownItemClick(item)" class="dropdown-item myButton" type="button">{{ item.body | translate}}</button>
+					<hr class="myDivider" *ngIf="!last">
+				</ng-container>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
 		<label for="start">{{'BOOKING.START' | translate}}</label>
 		<input 
 		type="text" 
@@ -70,6 +87,21 @@
 		>
 	</div>
 
-	{{newReservationFg?.getRawValue() | json}}
+	<div *ngIf="!newReservationFg.valid">
+		<p class="small">{{ 'BOOKING.RULES' | translate }}</p>
+	</div>
+	<div *ngIf="newReservationFg.valid">
+		<p style="visibility: hidden;" class="small">{{ 'BOOKING.RULES' | translate }}</p>
+	</div>
 
+	<button (click)="onModalCancel()" type="button" class="btn btn-outline-danger float-right cancelButton">{{ 'BOOKING.CANCEL' | translate}}</button>
+	<button [disabled]="!newReservationFg.valid" (click)="onModalSave()" type="button" class="btn btn-outline-primary float-right">{{ 'BOOKING.SAVE' | translate}}</button>
+
+
+	<!-- {{newReservationFg?.getRawValue() | json}} -->
+
+</ng-template>
+
+<ng-template #adminModalBodyTemplate> 
+	aloha
 </ng-template>

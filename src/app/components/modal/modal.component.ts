@@ -8,40 +8,43 @@ import { TranslateModule } from '@ngx-translate/core';
 	styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
+  public modalExists = false;
 
-	@ViewChild('modalActivator') public modalActivator: ElementRef;
-	@ViewChild('modalCloseButton') public modalCloseButton: ElementRef;
-	
+  @ViewChild('modalActivator') public modalActivator: ElementRef;
+  @ViewChild('modalCloseButton') public modalCloseButton: ElementRef;
+  
   @Input() modalBodyTemplate: any;
 
   @Output() public onModalButtonClick = new EventEmitter();
   @Output() public onCloseModal = new EventEmitter();
- 
+  
  @Input() title = ''; // Modal title
   @Input() titleLeft = true; // Title left or right
   @Input() modalWidth = '500px'; // The width can be in px % or vw.
 
   constructor(
-  		) {
+    ) {
 
   }
   // Displays the modal by triggering a click to a hidden button.
   public displayModal() {
-  	this.modalActivator.nativeElement.click();
+    this.modalExists = true;
+    setTimeout(() => {this.modalActivator.nativeElement.click();});
   }
 
   public closeModal() {
-  	this.modalCloseButton.nativeElement.click();
+    this.modalExists = false;
+    this.modalCloseButton.nativeElement.click();
   }
 
-   private dynamicTitle: Function = () => {};
+  public dynamicTitle: Function = () => {};
 
-   private onStateChange(event) {
-   	this.onCloseModal.emit(event);
-   }
+  public onStateChange(event) {
+    this.onCloseModal.emit(event);
+  }
 
-   private onModalbuttonClick(button) {
-   	this.onModalButtonClick.emit(button);
-   }
+  public onModalbuttonClick(button) {
+    this.onModalButtonClick.emit(button);
+  }
 
 }

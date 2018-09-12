@@ -27,3 +27,11 @@ p, a {
 .fc-divider {
 	display: none !important;
 }
+
+.fc-time-grid-event {
+	width: 100%
+}
+
+.fc-today {
+	background: transparent !important;
+}

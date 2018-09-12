@@ -1,0 +1,10 @@
+{
+  "/appointments": {
+    "target": "https://bolojo.dyndns.org",
+    "secure": false
+  },
+  "/users": {
+    "target": "https://bolojo.dyndns.org",
+    "secure": false
+  }
+}

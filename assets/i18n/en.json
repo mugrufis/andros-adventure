@@ -5,10 +5,67 @@
 		"RULES":"Rules",
 		"BOOKING":"Booking",
 		"CONTACT":"Contact",
-		"LANGUAGE": "Ελληνικά"
+		"LANGUAGE": "Ελληνικά",
+		"DARK_OFFICE": "The Room"
 	},
 	"ABOUT": {
 		"BODY": "A mystery room is a place full of riddles, hidden objects etc similar to an escape room. The difference is that a party is not looking for a way to escape the room. They will try to reveal the story that is hidden inside it."
 	},
-	"LOCALE": "en"
+	"RULES": {
+		"TITLE_1": "Duration",
+		"1": "The players have one and a half hours to discover the secrets hidden in the room",
+		"TITLE_2": "Players",
+		"2": "The ideal number of players is 3-6 but the website provides you with a wider range",
+		"TITLE_3": "Don'ts",
+		"3": "No physical attributes are required, ie. speed, strength etc.",
+		"TITLE_4": "Dos",
+		"4": "What is required, logical thinking, imagination, observingness and a strong spirit of cooperation!",
+		"TITLE_5": "Difficulty",
+		"5": "This is a relatively difficult room (8/10), but without the difficulty weighting down the fun players experience.",
+		"TITLE_6": "Room",
+		"6": "Τhe Dark Office is an atmospheric room, but not a scary one, making it suitable for the younger adventurers as well.",
+		"TITLE_7": "Goal",
+		"7": "Every team has to unravel the story of the mysterious Α.Α. as far as possible, with the main goal of finding the 'key item' hidden in the room.",
+		"TITLE_8": "Independent Riddles",
+		"8": "Many information are hidden in independent riddles that one can miss even by successfully finishing the room!"
+	},
+	"CONTACT": {
+		"PHONE": "Phone:",
+		"MAIL": "Email:",
+		"ADDRESS": "Address:",
+		"ACTUAL_ADDRESS": "Korthi bay main street (Agora) 84502 Andros",
+		"CREATOR": "Website Developer",
+		"NAME": "Theo Sioris"
+	},
+	"DARK_OFFICE": {
+		"1": "Hello, my name is Giorgos.",
+		"2": "A while ago a lawyer contacted me to let me know that a client of his, anonymously, wanted to provide me with an office space. Without thinking it much I accepted the offer, and soon I had the office keys in my hands. Upon visiting it I figgured out quickly that may weird things where hidden in there. I am pretty bad at solving riddles but I understood one thing well. In this room, hidden, lies the story of my mysterious benefactor, as well as an 'key item' that can bring important evidence to light.",
+		"3": "Can you and your team search this office and uncover the story of the mysterious A.A? Can you find the 'key item'?"
+		},
+	"BOOKING": {
+		"NEW": "New Booking",
+		"NAME": "Name:",
+		"PHONE":"Phone:",
+		"START":"From:",
+		"END":"To:",
+		"EMAIL":"Email:",
+		"TERMS": "Terms and conditions...",
+		"SAVE": "Book Now",
+		"CANCEL": "Cancel",
+		"RULES": "To complete the booking all the fields must be filled, and you accept the terms and conditions.",
+		"ERROR": "The booking system is currently unavailable. Please try again later, or call us on the phone number displayed bellow."
+	},
+	"PERSONS_AND_PRICES": {
+		"LABEL": "Αριθμός ατόμων:",
+		"SELECT":"Επιλέξτε αριθμό ατόμων",
+		"1": "1 Person (30€)",
+		"2": "2 Persons (40€)",
+		"3": "3 Persons (45€)",
+		"4": "4 Persons (48€)",
+		"5": "5 Persons (50€)",
+		"6": "6 Persons (60€)",
+		"7": "7 Persons (70€)",
+		"8": "8 Persons (80€)"
+	},
+	"LOCALE": "el"
 }

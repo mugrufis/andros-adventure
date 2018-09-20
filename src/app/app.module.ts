@@ -19,6 +19,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BootstrapInputComponent } from './components/bootstrap-input/bootstrap-input.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginService } from './services/login.service';
+import { EscapeAllBookingComponent } from './components/escape-all-booking/escape-all-booking.component';
 
 // import localeGr from '@angular/common/locales/gr';
 
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 	DarkOfficeComponent,
 	ModalComponent,
 	BootstrapInputComponent,
-	LoginComponent
+	LoginComponent,
+	EscapeAllBookingComponent
 	],
 	imports: [
 	BrowserModule,

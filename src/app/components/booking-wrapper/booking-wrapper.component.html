@@ -1,3 +1,4 @@
+
 <div class="container-fluid wrapper">
 	<div class="row">
 		<div class="col-sm-12">
@@ -98,8 +99,6 @@
 	<button [disabled]="!newReservationFg.valid" (click)="onModalSave()" type="button" class="btn btn-outline-primary float-right">{{ 'BOOKING.SAVE' | translate}}</button>
 
 
-	<!-- {{newReservationFg?.getRawValue() | json}} -->
-
 </ng-template>
 
 <ng-template #adminModalBodyTemplate> 
@@ -137,29 +136,6 @@
 		</div>
 	</div>
 
-<!-- 	<div class="form-group">
-		<label for="start">{{'BOOKING.START' | translate}}</label>
-		<input 
-		type="text" 
-		class="form-control" 
-		id="start" 
-		placeholder="" 
-		disabled 
-		[value]="startDisplayValue" 
-		>
-	</div>
-
-	<div class="form-group">
-		<label for="end">{{'BOOKING.END' | translate}}</label>
-		<input 
-		type="text" 
-		class="form-control" 
-		id="end" 
-		placeholder="" 
-		disabled 
-		[value]="endDisplayValue"
-		>
-	</div> -->
 
 	<div *ngIf="!newReservationFg.valid">
 		<p class="small">{{ 'BOOKING.RULES' | translate }}</p>
@@ -169,7 +145,6 @@
 	</div>
 
 	<button (click)="onModalCancel()" type="button" class="btn btn-outline-danger float-right cancelButton">{{ 'BOOKING.CANCEL' | translate}}</button>
-<!-- 	<button [disabled]="!newReservationFg.valid" (click)="onModalAdminSave()" type="button" class="btn btn-outline-primary float-right">Aποθήκευση Αλλαγών</button> -->
 	<button (click)="onModalAdminDelete()" type="button" class="btn btn-outline-primary float-right">Διαγραφή Κράτησης</button>
 
 </ng-template>

@@ -1,0 +1,26 @@
+.wrapper {
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+		background-color: rgba(255,255,255, 0.9);
+}
+
+.myDivider {
+	margin: 0;
+}
+
+.myButton {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.myButton:hover {
+	cursor: pointer;
+}
+
+.cancelButton {
+	margin-left: 10px;
+}
+
+#BookingId {
+	padding-top: 5vh;
+}

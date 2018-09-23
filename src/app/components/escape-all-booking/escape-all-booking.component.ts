@@ -18,9 +18,7 @@ export class EscapeAllBookingComponent implements OnInit, AfterViewInit {
 	}
 
 	ngAfterViewInit() {
-		// this.addScriptTagToDom(this.setScriptTag(this.getCurrentLanguage()));
-		// this.renderBookingSystem(this.getCurrentLanguage());
-	}
+		}
 
 	private addScriptTagToDom(scriptTag) {
 		this.elementRef.nativeElement.appendChild(scriptTag);
@@ -47,8 +45,15 @@ export class EscapeAllBookingComponent implements OnInit, AfterViewInit {
 	}
 
 	private renderBookingSystem(language) {
-		GetBookingCalendra('#BookingId ', { ServiceId: ['d1714c07-028d-436c-b80e-4343a1a7b6bd'], lang: language, Template: 5 });	
-		this.attemptToStyle(5, 150);
+		GetBookingCalendra('#BookingId ', { 
+			ServiceId: ['d1714c07-028d-436c-b80e-4343a1a7b6bd'],
+			lang: language,
+			Template: 5,
+			success: this.styleBookingSystem,
+                error: function (x, y, z) {
+                    console.log(x + '\n' + y + '\n' + z);
+                }
+                 });
 	}
 
 	private styleBookingSystem() {
@@ -63,10 +68,11 @@ export class EscapeAllBookingComponent implements OnInit, AfterViewInit {
 			return false;
 		}
 		$calendra.classList.remove('col-md-5');
-		$calendra.classList.add('col-md-10', 'offset-1');
+		$calendra.classList.add('col', 'align-self-center');//'col-md-10', 'offset-1'
 
 		$reservationForm.classList.remove('col-md-7');
-		$reservationForm.classList.add('col-md-10', 'offset-1');
+		$reservationForm.classList.add('col-md-12');
+		// $reservationForm.children[0].classList.add('col', 'align-self-center');
 
 		let $timeSelect = document.getElementsByClassName('time-selection-panel')[0];
 		let $timeSelectList = document.getElementsByClassName('time-selection');
@@ -80,20 +86,12 @@ export class EscapeAllBookingComponent implements OnInit, AfterViewInit {
 		for (let i = 0; i < $dateCells.length; i++) {
 			if ($dateCells[i].classList.contains('available')) {
 				$dateCells[i].addEventListener('click', () => {
-					$timeSelect.scrollIntoView({behavior: 'smooth',block: "nearest", inline: "nearest"});
+					$timeSelect.scrollIntoView({behavior: 'smooth',block: "end", inline: "nearest"});
 				});
 			}
 		}	
 
 		return true;
-	}
-
-	private attemptToStyle(times: number, latency: number) {
-		setTimeout(() => {
-			if (!this.styleBookingSystem() && times > 0) {
-				this.attemptToStyle(times - 1, latency + 100);
-			}
-		}, latency);
 	}
 
 }

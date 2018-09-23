@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, Renderer, ElementRef } from '@angular/core';
 import { ILink } from '../../utilities/i-link';
 import {TranslateService} from '@ngx-translate/core';
 
@@ -11,8 +11,8 @@ import {TranslateService} from '@ngx-translate/core';
 export class NavbarComponent implements OnInit {
 	public chosenLanguage;
 	public languages = [
-	{language: 'English', code: 'gr'},
-	{language: 'Ελληνικά', code: 'en'}
+	{language: 'Ελληνικά', code: 'gr'},
+	{language: 'English', code: 'en'}
 	];
 
 	public navbarLinks: ILink[] = [
@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
 	{title: 'NAVBAR.CONTACT', link: 'contact'},
 	];
 
-	constructor(private translate: TranslateService) { }
+	constructor(private translate: TranslateService, private renderer: Renderer, private el: ElementRef) { }
 
 	ngOnInit() {
 		if (this.translate.currentLang === 'gr') {
@@ -33,24 +33,21 @@ export class NavbarComponent implements OnInit {
 		
 	}
 
+
 	private getCurrentUrl() {
     // TODO along with routing fix this / bad performance
     return window.location.pathname;
 }
 
 onNavbarClick(id) {
+	this.renderer.setElementClass(this.el.nativeElement.querySelector('#navbarSupportedContent'), 'show', false);
 	document.querySelector('#' + id).scrollIntoView({behavior: 'smooth',block: "start", inline: "nearest"});
 }
 
 
-changeLanguage() {
-	if (this.translate.currentLang === 'gr') {
-		this.translate.use('en');
-		this.chosenLanguage = 'English';
-	} else {
-		this.translate.use('gr');
-		this.chosenLanguage = 'Ελληνικά';
-	}
+changeLanguage(lang) {
+	this.translate.use(lang.code);
+	this.chosenLanguage = lang.language;
 }
 
 }

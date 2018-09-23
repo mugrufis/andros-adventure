@@ -39,7 +39,7 @@
 	},
 	"DARK_OFFICE": {
 		"1": "Hello, my name is Giorgos.",
-		"2": "A while ago a lawyer contacted me to let me know that a client of his, anonymously, wanted to provide me with an office space. Without thinking it much I accepted the offer, and soon I had the office keys in my hands. Upon visiting it I figgured out quickly that may weird things where hidden in there. I am pretty bad at solving riddles but I understood one thing well. In this room, hidden, lies the story of my mysterious benefactor, as well as an 'key item' that can bring important evidence to light.",
+		"2": "A while ago a lawyer contacted me to let me know that a client of his, anonymously, wanted to provide me with an office space. Without thinking it much I accepted the offer, and soon I had the office keys in my hands. Upon visiting it I figgured out quickly that many weird things where hidden in there. I am pretty bad at solving riddles but I understood one thing well. In this room, hidden, lies the story of my mysterious benefactor, as well as a 'key item' that can bring important evidence to light.",
 		"3": "Can you and your team search this office and uncover the story of the mysterious A.A? Can you find the 'key item'?"
 		},
 	"BOOKING": {
@@ -66,6 +66,10 @@
 		"6": "6 Persons (60€)",
 		"7": "7 Persons (70€)",
 		"8": "8 Persons (80€)"
+	},
+	"LEGAL": {
+		"TITLE": "Terms and conditions",
+		"BODY": "Andros Adventures saves no user data. By making a reservation you accept the terms and conditions found in our booking service providers (EscapeAll) website (You can find a link directly underneath)."
 	},
 	"LOCALE": "el"
 }

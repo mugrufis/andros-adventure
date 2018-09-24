@@ -24,3 +24,12 @@
 #BookingId {
 	padding-top: 5vh;
 }
+
+.attribution {
+	text-align: center;
+	font-size: 12px;
+}
+
+.attribution a {
+	font-size: 12px;
+}
